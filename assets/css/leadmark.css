@@ -72,6 +72,15 @@ body {
   color: #444;
   text-align: left;
   background-color: #fff;
+
+  background-image: url('../imgs/1.gif');
+  background-size: cover;
+    
+    
+    
+  height: 100vh;
+  padding:0;
+  margin:0;
 }
 
 [tabindex="-1"]:focus {
