@@ -6266,6 +6266,7 @@ a.close.disabled {
 
 .toast:not(:last-child) {
   margin-bottom: 0.75rem;
+  
 }
 
 .toast.showing {
@@ -11429,14 +11430,32 @@ textarea.form-control {
   }
 }
 
-#myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
+@media screen and (max-width: 540px) {
+  #myVideo {
+    position: absolute;
+    right: -850px;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
 }
+
+/* For Tablets */
+@media screen and (min-width: 540px){
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+}
+
+
 
 .header {
   /*background: url(../imgs/bg2.png) no-repeat center center fixed;*/

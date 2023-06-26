@@ -6,12 +6,27 @@
     <meta name="description" content="Start your development with LeadMark landing page.">
     <meta name="author" content="Devcrud">
     <title>Maturitní Ples</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.png">
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + LeadMark main styles -->
 	<link rel="stylesheet" href="assets/css/leadmark.css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<script>
+    function loadDate(){
+            let date_1 = new Date('03/7/2024');
+            let date_2 = new Date();
+
+            const days = (date_1, date_2) =>{
+                let difference = date_1.getTime() - date_2.getTime();
+                let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+                return TotalDays;
+            }
+            document.getElementById("t_rem").innerHTML = days(date_1, date_2) + " dní do maturáku";
+            console.log(days(date_1, date_2) +" days to world cup");
+        }
+</script>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home"  onload="loadDate()">
 
     <!-- page Navigation -->
         <!--
@@ -83,8 +98,8 @@
         <div class="overlay">
             <h1 class="subtitle">4.EA 4.EB</h1>
             <h1 class="title">Breaking Bad</h1>  
-            <h1 class="subtitle">332 dní do maturáku!</h1>
-            <h6>v25</h6>
+            <h1 class="subtitle" id="t_rem">332 dní do maturáku!</h1>
+
         </div>  
         <div class="shape">
             <svg viewBox="0 0 1500 200">
@@ -335,7 +350,7 @@
                       </tr>
                       <tr>
                         <td>Honza Čada</td>
-                        <td>‎ </td>
+                        <td>🙉</td>
                         <td>....</td>
                       </tr>
                       <tr>
@@ -355,12 +370,12 @@
                       </tr>
                       <tr>
                         <td>Jaroslav Bartoš</td>
-                        <td>‎ </td>
+                        <td>🐒</td>
                         <td>....</td>
                       </tr>
                       <tr>
                         <td>Jiří Kundrát</td>
-                        <td>‎ </td>
+                        <td>🌚</td>
                         <td>....</td>
                       </tr>
                       <tr>
@@ -390,7 +405,7 @@
                       </tr>
                       <tr>
                         <td>Ondřej Kříž</td>
-                        <td>‎ </td>
+                        <td>❌</td>
                         <td>....</td>
                       </tr>
                       <tr>
@@ -452,37 +467,41 @@
 
     <!-- About Section -->
     <section class="section" id="about">
+        <div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+    style="background-image: url('assets/imgs/ticket_bg.png'); background-repeat: no-repeat; " id="myTicket"> 
+
         <div class="container">
+            
             <h6 class="section-title text-center">Lístky</h6>
-         
+            <p><h4>Chceš lístek ?</h4> Napiš nám na náš  <a href="https://www.instagram.com/elektrikari.z.dukly/" target="_blank">instagram!</a> </p>
         </div>
+        </div>
+
     </section>
     <!-- End OF About Section -->
 
     <!-- Minihra Section -->
     <section  id="service" class="section pt-0">
         <div class="container">
+            <br>
             <h6 class="section-title text-center">Minihra</h6>
             
-            <!--
-            <div class="row">
-                <div class="col">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">01</small>
-                            <h5 class="card-title mt-3"> Beatae quo <h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab fuga quae, minima reprehenderit sequi fugit.</p>
-                        </div>
-                    </div>
+            <div class="card" style="width: 100%">
+                <!--<img src="..." class="card-img-top" alt="...">-->
+                <div class="card-body">
+                  <h5 class="card-title">Již brzy!</h5>
+                  <p class="card-text">Soutěž o vstupy do tomboly díky kódu na každém lístku!</p>
+                  
                 </div>
-            -->
+              </div>
             
             </div>
         </div>
     </section>
     <!-- End OF Minihra Section -->
+<!--
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="section portfolio-section">
         <div class="container">
             <h6 class="section-title text-center">Our Portfolio</h6>
@@ -497,7 +516,7 @@
                 <a href="#" data-filter=".branding">
                     Branding
                 </a>
-                <a href="#" data-filter=".web">
+                <a href="#" data-fil ter=".web">
                     Web
                 </a>
             </div>
@@ -663,9 +682,7 @@
             </div>   
         </div>            
     </section>
-    <!-- End of portfolio section -->
 
-    <!-- Blog Section -->
     <section class="section" id="blog">
         <div class="container">
             <h6 class="section-title mb-0 text-center">Latest Articles</h6>
@@ -705,9 +722,7 @@
             </div>
         </div>
     </section>
-    <!-- End of Blog Section -->
 
-    <!-- Testmonial Section -->
     <section class="section" id="testmonial">
         <div class="container">
             <h6 class="section-title text-center mb-0">Testmonials</h6>
@@ -758,7 +773,7 @@
             </div>
         </div>
     </section>
-    <!-- End of Testmonial Section -->
+    -->
 
     <!-- Contact Section -->
     <!--
