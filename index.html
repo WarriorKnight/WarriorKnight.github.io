@@ -23,16 +23,22 @@
                 return TotalDays;
             }
 
-            document.getElementById("t_rem").innerHTML = "0" + " dní do maturáku!";
+            document.getElementById("t_rem").innerHTML = days(date_1, date_2) + " dní do maturáku!";
 
-            for (let i = 0; i < 10; i++) {   
-                console.log(i)
-                let t_days = days(date_1, date_2) + 10 - i;
-                document.getElementById("t_rem").innerHTML = t_days + " dní do maturáku!";
-                sleep(100 + (i*25));
-            } 
+            //for (let i = 0; i < 10; i++) {   
+            //    console.log(i)
+            //    let t_days = days(date_1, date_2) + 10 - i;
+            //    document.getElementById("t_rem").innerHTML = t_days + " dní do maturáku!";
+            //    sleep(100 + (i*25));
+            //} 
             
         }
+
+        function init() {
+            loadDate();
+}
+
+window.addEventListener("load", init);
 
         function sleep(milliseconds) {
           const date = Date.now();
@@ -42,7 +48,7 @@
           } while (currentDate - date < milliseconds);
         }
 </script>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home"  onload="loadDate()">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- page Navigation -->
         <!--
