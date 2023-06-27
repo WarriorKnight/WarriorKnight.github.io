@@ -22,8 +22,24 @@
                 let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
                 return TotalDays;
             }
-            document.getElementById("t_rem").innerHTML = days(date_1, date_2) + " dní do maturáku!";
-            console.log(days(date_1, date_2) +" days to world cup");
+
+            document.getElementById("t_rem").innerHTML = "0" + " dní do maturáku!";
+
+            for (let i = 0; i < 10; i++) {   
+                console.log(i)
+                let t_days = days(date_1, date_2) + 10 - i;
+                document.getElementById("t_rem").innerHTML = t_days + " dní do maturáku!";
+                sleep(100 + (i*25));
+            } 
+            
+        }
+
+        function sleep(milliseconds) {
+          const date = Date.now();
+          let currentDate = null;
+          do {
+            currentDate = Date.now();
+          } while (currentDate - date < milliseconds);
         }
 </script>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home"  onload="loadDate()">
@@ -65,27 +81,6 @@
 -->
     <!-- End Of Second Navigation -->
 
-    <script>
-        function ImageAnimation(){
-            var imageUrl= "header.jpg";
-            document.body.style.backgroundImage=imageUrl
-            console.log(" days to world cup");
-        }
-        function CheckViewport(){
-            
-        }
-
-        window.addEventListener('resize', function(event){
-            var bgVideo = document.getElementById("myVideo")
-            if ($(window).width() < 960) {
-                //bgVideo.style.height =  "100%";
-                //bgVideo.style.right =  "-550px;";
-            }
-            else {
-               // bgVideo.style.right =  "0";
-            }
-});
-    </script>
 
     <!-- Page Header -->
     <header class="header">
@@ -98,7 +93,7 @@
         <div class="overlay">
             <h1 class="subtitle">4.EA 4.EB</h1>
             <h1 class="title"  style="text-shadow: rgb(0, 0, 0) 0 0 10px;">Breaking Bad</h1>  
-            <h1 class="subtitle" id="t_rem">332 dní do maturáku!</h1>
+            <h1 class="subtitle" id="t_rem"></h1>
 
         </div>  
         <div class="shape">
@@ -132,29 +127,29 @@
                 <table class="table text-center">
                     <thead>
                         <tr>
-                            <td>Škola</td>
+                            <td class="info_l">Škola</td>
                             <td>SPŠSE</td>
                           </tr>
                       <tr>
-                        <td>Kdy</td>
+                        <td class="info_l">Kdy</td>
                         <td>07.03.2024</td>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Kde</td>
+                        <td class="info_l">Kde</td>
                         <td>DK Metropol</td>
                       </tr>
                       <tr>
-                        <td>Cena</td>
+                        <td class="info_l">Cena</td>
                         <td>250Kč</td>
                       </tr>
                       <tr>
-                        <td>Instagram</td>
+                        <td class="info_l">Instagram</td>
                         <td><a href="https://www.instagram.com/elektrikari.z.dukly/" target="_blank">elektrikari.z.dukly</a></td>
                       </tr>
                       <tr>
-                        <td>Facebook událost</td>
+                        <td class="info_l">Facebook událost</td>
                         <td><a href="https://www.facebook.com/events/656473325923286" target="_blank">Maturitní Ples — 4.EA + 4.EB</a></td>
                       </tr>
                     </tbody>
@@ -186,142 +181,142 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>🎤</td>
+                            <td class="emoji">🎤</td>
                             <td>Baier Petr</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Bláha Jakub</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🍆</td>
+                            <td class="emoji">🍆</td>
                             <td>Černý Maxmilián</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤥</td>
+                            <td class="emoji">🤥</td>
                             <td>Čížek Vojtěch</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤓</td>
+                            <td class="emoji">🤓</td>
                             <td>Fišer Lukáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🚀</td>
+                            <td class="emoji">🚀</td>
                             <td>Fousek Matouš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>👩🏿‍🦯</td>
+                            <td class="emoji">👩🏿‍🦯</td>
                             <td>Hejlová Tereza</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Hrubeš David</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🏋️</td>
+                            <td class="emoji">🏋️</td>
                             <td>Klimenda Ivan</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>👨🏼‍💻</td>
+                            <td class="emoji">👨🏼‍💻</td>
                             <td>Kodat Vojtěch</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Konzal Jan</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🫡</td>
+                            <td class="emoji">🫡</td>
                             <td>Luxa Jakub</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Lounek Ondřej</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>👺</td>
+                            <td class="emoji">👺</td>
                             <td>Mácha Tomáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Maxmilian David Valeš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🥽</td>
+                            <td class="emoji">🥽</td>
                             <td>Novotný Pavel</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🔴</td>
+                            <td class="emoji">🔴</td>
                             <td>Pavlíček Vít</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🦎</td>
+                            <td class="emoji">🦎</td>
                             <td>Pavlík Martin</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🚲</td>
+                            <td class="emoji">🚲</td>
                             <td>Poláček Martin</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>📜</td>
+                            <td class="emoji">📜</td>
                             <td>Pouzar Stanislav</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤖</td>
+                            <td class="emoji">🤖</td>
                             <td>Rozboud František </td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Rychlý Ondřej</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🛹</td>
+                            <td class="emoji">🛹</td>
                             <td>Řebík Jakub</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤭</td>
+                            <td class="emoji">🤭</td>
                             <td>Siuda Tomáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🔫</td>
+                            <td class="emoji">🔫</td>
                             <td>Tippl Sam</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Tománek Jan</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🗾</td>
+                            <td class="emoji">🗾</td>
                             <td>Tousek Daniel</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🚽</td>
+                            <td class="emoji">🚽</td>
                             <td>Zikmund Ondřej</td>
                             <td>....</td>
                         </tr>
@@ -341,127 +336,127 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>🤘🏻</td>
+                            <td class="emoji">🤘🏻</td>
                             <td>Barcal Daniel</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🐒</td>
+                            <td class="emoji">🐒</td>
                             <td>Bartoš Jaroslav</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🚂</td>
+                            <td class="emoji">🚂</td>
                             <td>Cimpa Tomáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🙉</td>
+                            <td class="emoji">🙉</td>
                             <td>Čada Honza</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🇯🇲</td>
+                            <td class="emoji">🇯🇲</td>
                             <td>Drachovský Vojtěch</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🏐</td>
+                            <td class="emoji">🏐</td>
                             <td>Dvořák Tobiáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>⚡</td>
+                            <td class="emoji">⚡</td>
                             <td>Hanzal Petr</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>⛷️</td>
+                            <td class="emoji">⛷️</td>
                             <td>Houšť Ondřej</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Hrádek Aleš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>✌️</td>
+                            <td class="emoji">✌️</td>
                             <td>Chromý Jakub</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🥸</td>
+                            <td class="emoji">🥸</td>
                             <td>Kočárek Jakub</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🦧</td>
+                            <td class="emoji">🦧</td>
                             <td>Kroupa Matyáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>❌</td>
+                            <td class="emoji">❌</td>
                             <td>Kříž Ondřej</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🌚</td>
+                            <td class="emoji">🌚</td>
                             <td>Kundrát Jiří</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🍃</td>
+                            <td class="emoji">🍃</td>
                             <td>Machala Matyáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🍑</td>
+                            <td class="emoji">🍑</td>
                             <td>Máška Sebastian</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🧃</td>
+                            <td class="emoji">🧃</td>
                             <td>Navrátil Jan</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🔮</td>
+                            <td class="emoji">🔮</td>
                             <td>Pravda Václav</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🗿</td>
+                            <td class="emoji">🗿</td>
                             <td>Pytel Libor</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤑</td>
+                            <td class="emoji">🤑</td>
                             <td>Snopek Bohumil</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🐷</td>
+                            <td class="emoji">🐷</td>
                             <td>Svatý Filip</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🕳️</td>
+                            <td class="emoji">🕳️</td>
                             <td>Škopek Vojtěch</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤘</td>
+                            <td class="emoji">🤘</td>
                             <td>Štěch Ondřej</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🤡</td>
+                            <td class="emoji">🤡</td>
                             <td>Tůma Tomáš</td>
                             <td>....</td>
                         </tr>
                         <tr>
-                            <td>🙋🏻‍♂️</td>
+                            <td class="emoji">🙋🏻‍♂️</td>
                             <td>Zikmund Tomáš</td>
                             <td>....</td>
                         </tr>
@@ -484,9 +479,13 @@
     style="background-image: url('assets/imgs/ticket_bg.png'); background-repeat: no-repeat; " id="myTicket"> 
 
         <div class="container">
-            
+            <br>
+            <br>
             <h6 class="section-title text-center">Lístky</h6>
             <p><h4>Chceš lístek ?</h4> Napiš nám na náš  <a href="https://www.instagram.com/elektrikari.z.dukly/" target="_blank">instagram!</a> </p>
+            <br>
+            <br>
+            
         </div>
         </div>
 
