@@ -11461,8 +11461,33 @@ textarea.form-control {
   text-align: center;
 }
 
-.info_l{
 
+
+.names_ef {
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: 0.2s;
+}
+
+.names_ef:hover {
+  text-shadow: rgba(255,255,255,1) 0px 0px 10px;
+  box-shadow: inset 5px 0 0 0 orange;
+}
+
+.legenda {
+
+}
+
+.legenda:hover {
+  
+}
+
+
+.table > tr {
+  color: red;
+}
+
+.names{
+  cursor: default ;
 }
 
 
